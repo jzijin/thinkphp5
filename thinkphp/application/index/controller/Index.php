@@ -20,6 +20,6 @@ class Index extends Controller
     }
 
     public function del() {
-        return $this->del()
+        return $this->del();
     }
 }
