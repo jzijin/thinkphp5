@@ -1,3 +1,3 @@
 import time
-curretntime = time.time();
-print(curretntime)
+time = time.time()
+print(time)
