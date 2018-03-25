@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\amp\apache\htdocs\tp5\public/../application/admin\view\index\catedit.html";i:1521443944;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/html/tp5/public/../application/admin/view/index/catadd.html";i:1521442620;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     <label>栏目名称:</label>
                     <p>
-                        <input type="text" name="catname" value="<?php echo $cat['catname']; ?>">
+                        <input type="text" name="catname">
                     </p>
                 </div>
                 <div class="form-group">

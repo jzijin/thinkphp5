@@ -102,6 +102,8 @@ class Index extends Controller
     }
 
     public function artadd() {
+        // header('Access-Control-Allow-Headers: X-Requested-With,X_Requested_With'); 
+        // Route::get('new/:id', 'News/read')->ext('html')->allowCrossDomain();
         if(!acc()) {
             // header('Location: login.php');
             $this->redirect('login');
