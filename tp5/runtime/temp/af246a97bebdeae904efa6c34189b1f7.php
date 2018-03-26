@@ -1,11 +1,12 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522024493;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-<link rel="stylesheet" href="__PUBLIC__/style/css/reset.css">
-<link rel="stylesheet" href="__PUBLIC__/style/css/index.css">
-<link rel="stylesheet" href="__PUBLIC__/style/css/art.css">
+<link rel="stylesheet" href="http://127.0.0.1/tp5/public/static/index/style/css/reset.css">
+<link rel="stylesheet" href="http://127.0.0.1/tp5/public/static/index/style/css/index.css">
+<link rel="stylesheet" href="http://127.0.0.1/tp5/public/static/index/style/css/art.css">
 </head>
 <body>
     <header>
@@ -24,16 +25,16 @@
     <div id="main">
         <div id="lside">
             <article>
-                <h2><a href="#">{$art.title}</a></h2>
+                <h2><a href="#"><?php echo $art['title']; ?></a></h2>
                 <div class="entry_header">
-                    <time>{$art.pubtime|date='y-m-d', ###}</time>
+                    <time><?php echo date('y-m-d', $art['pubtime']); ?></time>
                     by
                     <a href="#">jzijin</a>
                     <a class="catlink" href="#">闲谈随笔</a>
-                    <a class="comment" href="#">{$art.comm}条评论</a>
+                    <a class="comment" href="#"><?php echo $art['comm']; ?>条评论</a>
                 </div>
                 <div class="entry_content">
-                    {$art.content}
+                    <?php echo $art['content']; ?>
                 </div>
             </article>
             <div id="comments">
@@ -94,9 +95,9 @@
             <aside>
                 <h4>栏目</h4>
                 <ul>
-                    {volist name='cat' id='v'}
-                    <li><a href="">{$v.catname}</a>&nbsp;({$v.num})</li>
-                    {/volist}
+                    <?php if(is_array($cat) || $cat instanceof \think\Collection || $cat instanceof \think\Paginator): $i = 0; $__LIST__ = $cat;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                    <li><a href=""><?php echo $v['catname']; ?></a>&nbsp;(<?php echo $v['num']; ?>)</li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </aside>
         </div>
