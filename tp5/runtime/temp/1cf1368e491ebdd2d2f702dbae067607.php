@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/html/tp5/public/../application/admin/view/index/login.html";i:1521653369;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/html/tp5/public/../application/admin/view/index/login.html";i:1522030263;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +22,14 @@ margin:0 auto;
         <div id="respond" class="comment-respond">
             <form action="#" method="post">
                 <p>
-                <input placeholder="用户名" name="username" type="text" value="" size="30">
+                <input placeholder="用户名" name="name" type="text" value="" size="30">
                 </p>
                 <p>
                 <input placeholder="密码" name="password" type="text" value="" size="30">
+                </p>
+                <p>
+                    <input placeholder="code" name="code" type="text" value="" size="30" style="width:50px;float:left;">
+                    <div><img style="cursor: pointer;" src="<?php echo captcha_src(); ?>" alt="captcha" onclick="this.src='<?php echo captcha_src(); ?>?'+Math.random();" /></div>
                 </p>
                 <input type="submit" value="登陆">
                 </p>

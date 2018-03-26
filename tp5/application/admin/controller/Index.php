@@ -299,8 +299,11 @@ class Index extends Controller
 
     public function login() {
         if(request()->isPost()) {
-            $data['name'] = trim(input('username'));
-            $data['password'] = trim(input('password'));
+            $data = input('post.');
+            $captcha = new \think\captcha\Captcha();
+            if(!$captcha->check($data['code'])) {
+                $this->error('验证码错误');
+            }
             $validate =  Loader::validate('Login');
             if(!$validate->check($data)) {
                 $this->error($validate->getError());
