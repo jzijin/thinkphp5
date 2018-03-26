@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/html/tp5/public/../application/admin/view/index/artadd.html";i:1521986868;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"/var/www/html/tp5/public/../application/admin/view/index/artadd.html";i:1522023041;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="http://127.0.0.1/tp5/public/static/admin/style/css/reset.css">
 <link rel="stylesheet" href="http://127.0.0.1/tp5/public/static/admin/style/css/adm.css">
 <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/tp5/public/static/admin/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://127.0.0.1/tp5/public/static/admin/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://127.0.0.1/tp5/public/static/admin/ueditor/ueditor.all.js"> </script>
 <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
 <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
 <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/tp5/public/static/admin/ueditor/lang/zh-cn/zh-cn.js"></script>
@@ -96,7 +96,6 @@
 </body>
 <script>
      window.UEDITOR_HOME_URL = "/tp5/public/static/admin/ueditor/"
-    var ue = UE.getEditor('editor' ,{autoHeightEnabled: true,
-    autoFloatEnabled: true});
+    var ue = UE.getEditor('editor');
 </script>
 </html>
