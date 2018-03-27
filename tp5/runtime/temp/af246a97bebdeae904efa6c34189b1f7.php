@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522115258;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522158067;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>十八哥的Blog</h1>
+        <h1>jzijin's blog</h1>
         <h4>乘风行,无惧</h4>
     </header>
     <nav>

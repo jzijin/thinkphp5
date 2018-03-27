@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/html/tp5/public/../application/index/view/index/index.html";i:1521892184;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/var/www/html/tp5/public/../application/index/view/index/index.html";i:1522155309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,8 +63,9 @@
         </div>
         <div id="rside">
             <aside>
-                <form action="">
+                <form action="index/search">
                     <input type="text" name="search" placeholder="Search...">
+                    <input type="submit" value="提交">
                 </form>
             </aside>
             <aside>
