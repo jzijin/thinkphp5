@@ -5,12 +5,10 @@ use think\Db;
 
 class Search extends Controller
 {
-    // TODO:完成搜索任务
     public function index() {
         $keywords = input("search");
-        // dump($keywords);
 
-        // 如果根据传过来的内容搜索文章？
+        // 如果根据传过来的内容搜索文章？ 这边根据title搜索 优化根据标签搜索.．
         $arts = Db::name('art')->where(['title'=> ['like', '%'.$keywords.'%']])->select();
         // dump($arts);die;
         $this->assign('art', $arts);

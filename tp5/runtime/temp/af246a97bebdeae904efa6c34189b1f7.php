@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522158067;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522162361;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@
                     <time><?php echo date('y-m-d', $art['pubtime']); ?></time>
                     by
                     <a href="#">jzijin</a>
-                    <a class="catlink" href="#">闲谈随笔</a>
+                    <a class="catlink" href="#"><?php echo $art['catname']; ?></a>
                     <a class="comment" href="#"><?php echo $art['comm']; ?>条评论</a>
                 </div>
                 <div class="entry_content">

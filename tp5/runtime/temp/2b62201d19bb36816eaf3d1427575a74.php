@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/html/tp5/public/../application/index/view/search/search.html";i:1522158396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/var/www/html/tp5/public/../application/index/view/search/search.html";i:1522158619;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

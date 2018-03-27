@@ -9,10 +9,8 @@ class Art extends Controller
     public function index()
     {
         $art_id = input('art_id');
-        $art = Db::name('art')->where('art_id', $art_id)->find();
-        // dump($art);
+        $art = Db::name('art')->alias('a')->join('cat c', 'a.cat_id = c.cat_id')->where('art_id', $art_id)->find();
         $cats = Db::name('cat')->select();
-
         // 查找出所有的文章评论
         $comms = Db::name('comment')->where('art_id', $art_id)->select();
        // dump($comms);die;
@@ -30,7 +28,10 @@ class Art extends Controller
                 $this->error($validate->getError());
                 die;
             }
+
+            // 评论成功文章评论数加一;
             if(Db::name('comment')->insert($data)) {
+                Db::name('art')->where('art_id', $data['art_id'])->setInc('comm');
                 $this->success('评论成功');
             }
 

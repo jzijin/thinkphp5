@@ -40,7 +40,7 @@
                     <time>{$art.pubtime|date='y-m-d', ###}</time>
                     by
                     <a href="#">jzijin</a>
-                    <a class="catlink" href="#">闲谈随笔</a>
+                    <a class="catlink" href="{:url('catart', array('cat_id'=>$art['cat_id']))}"></a>
                     <!-- TODO 如果长度太长省略显示 -->
                     <a class="comment" href="#">{$art.comm}条评论</a>
                 </div>
