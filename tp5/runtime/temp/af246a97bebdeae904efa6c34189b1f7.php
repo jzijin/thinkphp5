@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522024493;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/var/www/html/tp5/public/../application/index/view/art/art.html";i:1522115258;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,36 +38,20 @@
                 </div>
             </article>
             <div id="comments">
+                
+                    <?php if(is_array($comm) || $comm instanceof \think\Collection || $comm instanceof \think\Paginator): $i = 0; $__LIST__ = $comm;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$comm): $mod = ($i % 2 );++$i;?>
                 <ol>
                     <li>
                         <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
+                        <cite><a href="#"><?php echo $comm['nick']; ?></a></cite> <br>
+                        <time><?php echo date("y-m-d", $comm['pubtime']); ?></time>
+                        
                     </li>
                     <li>
-                        十八哥的文章写的好啊
+                        <?php echo $comm['content']; ?>
                     </li>
                 </ol>
-                <ol>
-                    <li>
-                        <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
-                    </li>
-                    <li>
-                        十八哥的文章写的好啊
-                    </li>
-                </ol>
-                <ol>
-                    <li>
-                        <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
-                    </li>
-                    <li>
-                        十八哥的文章写的好啊
-                    </li>
-                </ol>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
             <div id="respond" class="comment-respond">
                 <h3>Leave a Comment</h3>

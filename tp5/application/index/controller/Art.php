@@ -13,12 +13,16 @@ class Art extends Controller
         // dump($art);
         $cats = Db::name('cat')->select();
 
+        // 查找出所有的文章评论
+        $comms = Db::name('comment')->where('art_id', $art_id)->select();
+       // dump($comms);die;
         if(request()->isPost()) {
             $data = [
                 'art_id' => $art_id,
                 'nick' => input('username'),
                 'content' => trim(input('comment')),
-                'email' => trim(input('email'))
+                'email' => trim(input('email')),
+                'pubtime' => time(),
             ];
 
             $validate = Loader::validate('Comment');
@@ -29,10 +33,12 @@ class Art extends Controller
             if(Db::name('comment')->insert($data)) {
                 $this->success('评论成功');
             }
-            
+
         }
+
         $this->assign('cat', $cats);
         $this->assign('art', $art);
+        $this->assign('comm', $comms);
         return view('art');
     }
 }

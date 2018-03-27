@@ -37,36 +37,20 @@
                 </div>
             </article>
             <div id="comments">
+                
+                    {volist name='comm' id='comm'}
                 <ol>
                     <li>
                         <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
+                        <cite><a href="#">{$comm.nick}</a></cite> <br>
+                        <time>{$comm.pubtime|date="y-m-d", ###}</time>
+                        
                     </li>
                     <li>
-                        十八哥的文章写的好啊
+                        {$comm.content}
                     </li>
                 </ol>
-                <ol>
-                    <li>
-                        <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
-                    </li>
-                    <li>
-                        十八哥的文章写的好啊
-                    </li>
-                </ol>
-                <ol>
-                    <li>
-                        <img src="https://secure.gravatar.com/avatar/582b66ad5ae1b69c7601a990cb9a661a?s=50&d=identicon&r=pg" alt="">
-                        <cite><a href="#">钻石王老五</a></cite> <br>
-                        <time>2015年8月4日 20时31分</time>
-                    </li>
-                    <li>
-                        十八哥的文章写的好啊
-                    </li>
-                </ol>
+                    {/volist}
             </div>
             <div id="respond" class="comment-respond">
                 <h3>Leave a Comment</h3>
