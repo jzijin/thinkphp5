@@ -1,0 +1,9 @@
+----------------------------
+2018/04/13 23:44:59
+insert into user (username,idnumber,password,repassword) values ('aaa','aaa','aaa','aaa')
+Unknown column 'repassword' in 'field list'
+
+----------------------------
+2018/04/13 23:45:39
+insert into user (username,idnumber,password) values ('aaa','aaa','aaa')
+

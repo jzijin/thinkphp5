@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS `user`(
+   `user_id` INT UNSIGNED AUTO_INCREMENT,
+   `username` char(20) NOT NULL,
+   `idnumber` char(20) NOT NULL,
+   `password` char(30) NOT NULL,
+   PRIMARY KEY ( `user_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `art`(
+   `art_id` INT UNSIGNED AUTO_INCREMENT,
+   `title` varchar(50) NOT NULL,
+   `cat_id` int UNSIGNED NOT NULL,
+   `content` varchar(10000) NOT NULL,
+   PRIMARY KEY ( `art_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

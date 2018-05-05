@@ -1,0 +1,16 @@
+----------------------------
+2018/04/15 10:43:44
+insert into art (title,cat_id,content) values ('哈哈','2','<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;水电费&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>')
+
+----------------------------
+2018/04/15 10:50:35
+select *from art
+
+----------------------------
+2018/04/15 10:51:19
+select *from art
+
+----------------------------
+2018/04/15 11:41:14
+select *from art
+
